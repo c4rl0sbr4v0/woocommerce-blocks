@@ -4,39 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "938acec166de3572a0884e7e81a9ba52",
+    "content-hash": "570e051ded4d1bc8c51aaca784e1bc1f",
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
-            "version": "v2.11.6",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-autoloader.git",
-                "reference": "a22f41ff845b8bd4591a933b282270f57dd5bc1d"
+                "reference": "eb6331a5c50a03afd9896ce012e66858de9c49c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/a22f41ff845b8bd4591a933b282270f57dd5bc1d",
-                "reference": "a22f41ff845b8bd4591a933b282270f57dd5bc1d",
+                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/eb6331a5c50a03afd9896ce012e66858de9c49c5",
+                "reference": "eb6331a5c50a03afd9896ce012e66858de9c49c5",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.1 || ^2.0"
+                "composer-plugin-api": "^2.2",
+                "php": ">=7.2"
             },
             "require-dev": {
-                "automattic/jetpack-changelogger": "^3.1",
-                "yoast/phpunit-polyfills": "1.0.3"
+                "automattic/jetpack-changelogger": "^5.1.0",
+                "composer/composer": "^2.2",
+                "yoast/phpunit-polyfills": "^1.1.1"
             },
             "type": "composer-plugin",
             "extra": {
-                "autotagger": true,
                 "class": "Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin",
+                "autotagger": true,
                 "mirror-repo": "Automattic/jetpack-autoloader",
+                "branch-alias": {
+                    "dev-trunk": "5.0.x-dev"
+                },
                 "changelogger": {
                     "link-template": "https://github.com/Automattic/jetpack-autoloader/compare/v${old}...v${new}"
                 },
-                "branch-alias": {
-                    "dev-trunk": "2.11.x-dev"
+                "version-constants": {
+                    "::VERSION": "src/AutoloadGenerator.php"
                 }
             },
             "autoload": {
@@ -52,10 +57,18 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Creates a custom autoloader for a plugin or theme.",
+            "keywords": [
+                "autoload",
+                "autoloader",
+                "composer",
+                "jetpack",
+                "plugin",
+                "wordpress"
+            ],
             "support": {
-                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v2.11.6"
+                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v5.0.0"
             },
-            "time": "2022-06-21T07:32:07+00:00"
+            "time": "2024-11-25T16:33:57+00:00"
         },
         {
             "name": "composer/installers",
@@ -2833,5 +2846,5 @@
     "platform-overrides": {
         "php": "7.4.24"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
