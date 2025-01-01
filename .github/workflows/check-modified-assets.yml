@@ -33,7 +33,7 @@ jobs:
               run: npm run build:check-assets
 
             - name: Upload Artifact
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4.5.0
               with:
                   name: assets-list
                   path: ./build/assets.json
